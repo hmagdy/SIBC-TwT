@@ -1,0 +1,15 @@
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Library\cs\bin\Debug\WordNetClasses.dll.config
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Library\cs\bin\Debug\WordNetClasses.dll
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Library\cs\bin\Debug\WordNetClasses.pdb
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Library\cs\bin\Debug\WordNetClasses.dll.xml
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Library\cs\obj\Debug\WordNetClasses.dll
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Library\cs\obj\Debug\WordNetClasses.dll.xml
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Library\cs\obj\Debug\WordNetClasses.pdb
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Library\cs\bin\Debug\WordNetClasses.dll.config
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Library\cs\bin\Debug\WordNetClasses.dll
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Library\cs\bin\Debug\WordNetClasses.pdb
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Library\cs\bin\Debug\WordNetClasses.dll.xml
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Library\cs\obj\Debug\WordNet.Net.csprojResolveAssemblyReference.cache
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Library\cs\obj\Debug\WordNetClasses.dll
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Library\cs\obj\Debug\WordNetClasses.dll.xml
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Library\cs\obj\Debug\WordNetClasses.pdb

@@ -1,0 +1,14 @@
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Projects\Thanh\bin\Debug\WordsMatching.exe
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Projects\Thanh\bin\Debug\WordsMatching.pdb
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Projects\Thanh\bin\Debug\WordNetClasses.dll
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Projects\Thanh\bin\Debug\WordNetClasses.pdb
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Projects\Thanh\obj\Debug\SemanticSimilarity.csprojResolveAssemblyReference.cache
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Projects\Thanh\obj\Debug\WordsMatching.exe
+E:\Dropbox\Master's\myMSc\Practical Part\K-MEANS Clustering\wordnetdotnet-master\Projects\Thanh\obj\Debug\WordsMatching.pdb
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Projects\Thanh\bin\Debug\WordsMatching.exe
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Projects\Thanh\bin\Debug\WordsMatching.pdb
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Projects\Thanh\bin\Debug\WordNetClasses.dll
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Projects\Thanh\bin\Debug\WordNetClasses.pdb
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Projects\Thanh\obj\Debug\SemanticSimilarity.csprojResolveAssemblyReference.cache
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Projects\Thanh\obj\Debug\WordsMatching.exe
+E:\Dropbox\Master's\myMSc\Practical Part\Sematic_K-MEANSClustering\wordnetdotnet-master\Projects\Thanh\obj\Debug\WordsMatching.pdb
