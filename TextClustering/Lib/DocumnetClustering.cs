@@ -31,7 +31,7 @@ namespace TextClustering.Lib
         /// <returns></returns>
 
 
-        public static List<Centroid> PrepareDocumentCluster(int k, List<DocumentVector> documentCollection, ref int _counter, string sim, List<ClusterNode> allClusters, string dataSet)
+        public static List<Centroid> PrepareDocumentCluster(int k, List<DocumentVector> documentCollection, ref int _counter, string sim, List<ClusterNode> allClusters, string dataSet, int maxNoDoc)
         {
 
 
@@ -54,24 +54,24 @@ namespace TextClustering.Lib
             //uniqRand.Add(5);
 
             //first 12 --------> 3  clus ----> 11
-            if (dataSet == "Reu_01" && k == 3)
+            Dictionary<string, HashSet<int>> Pairs = new Dictionary<string, HashSet<int>>();
+            Pairs["Reu_01_3_12"] = new HashSet<int> { 4,6,2 };
+
+
+            //Pairs["Test_3_12"] = new HashSet<int> { 2, 9, 7 };//43
+            //Pairs["Test_3_12"] = new HashSet<int> { 3, 5, 10 };//0
+
+
+            Pairs["Reu_01_2_12"] = new HashSet<int> { 12, 5 };
+            //Pairs["Test_2_12"] = new HashSet<int> { 7, 10 };
+            if (Pairs.ContainsKey(dataSet + "_" + k + "_" + maxNoDoc))
             {
-                uniqRand.Add(11);
-                uniqRand.Add(7);
-                uniqRand.Add(6);
-                //GenerateRandomNumber(ref uniqRand, k, documentCollection.Count);
+                uniqRand = Pairs[dataSet + "_" + k + "_" + maxNoDoc];
             }
             else
-                if (dataSet == "Reu_01" && k == 2)
-                {
-                    uniqRand.Add(11);
-                    uniqRand.Add(5);
-                    //GenerateRandomNumber(ref uniqRand, k, documentCollection.Count);
-                }
-                else
-                {
-                    GenerateRandomNumber(ref uniqRand, k, documentCollection.Count);
-                }
+            {
+                GenerateRandomNumber(ref uniqRand, k, documentCollection.Count);
+            }
 
 
 

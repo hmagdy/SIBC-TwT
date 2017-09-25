@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextClusteringGUI));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboxDataSet = new System.Windows.Forms.ComboBox();
+            this.lblTime = new System.Windows.Forms.Label();
             this.txtEntropy = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -56,9 +59,7 @@
             this.txtDoc2 = new System.Windows.Forms.TextBox();
             this.txtDoc1 = new System.Windows.Forms.TextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.lblTime = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboxDataSet = new System.Windows.Forms.ComboBox();
+            this.lblFScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.lblFScore);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.cboxDataSet);
             this.splitContainer1.Panel1.Controls.Add(this.lblTime);
@@ -108,6 +110,41 @@
             this.splitContainer1.Size = new System.Drawing.Size(867, 432);
             this.splitContainer1.SplitterDistance = 340;
             this.splitContainer1.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(29, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 14);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Data Set:";
+            // 
+            // cboxDataSet
+            // 
+            this.cboxDataSet.FormattingEnabled = true;
+            this.cboxDataSet.Items.AddRange(new object[] {
+            "Reu_01",
+            "Re0",
+            "Re1",
+            "Mini_Newsgroup",
+            "Test"});
+            this.cboxDataSet.Location = new System.Drawing.Point(93, 70);
+            this.cboxDataSet.Name = "cboxDataSet";
+            this.cboxDataSet.Size = new System.Drawing.Size(65, 21);
+            this.cboxDataSet.TabIndex = 33;
+            this.cboxDataSet.Text = "Reu_01";
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Location = new System.Drawing.Point(172, 72);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(42, 14);
+            this.lblTime.TabIndex = 32;
+            this.lblTime.Text = "Time: ";
             // 
             // txtEntropy
             // 
@@ -370,40 +407,15 @@
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
-            // lblTime
+            // lblFScore
             // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(188, 356);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(42, 14);
-            this.lblTime.TabIndex = 32;
-            this.lblTime.Text = "Time: ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 14);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Data Set:";
-            // 
-            // cboxDataSet
-            // 
-            this.cboxDataSet.FormattingEnabled = true;
-            this.cboxDataSet.Items.AddRange(new object[] {
-            "Reu_01",
-            "Re0",
-            "Re1",
-            "Mini_Newsgroup",
-            "Test"});
-            this.cboxDataSet.Location = new System.Drawing.Point(93, 70);
-            this.cboxDataSet.Name = "cboxDataSet";
-            this.cboxDataSet.Size = new System.Drawing.Size(65, 21);
-            this.cboxDataSet.TabIndex = 33;
-            this.cboxDataSet.Text = "Reu_01";
+            this.lblFScore.AutoSize = true;
+            this.lblFScore.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFScore.Location = new System.Drawing.Point(188, 355);
+            this.lblFScore.Name = "lblFScore";
+            this.lblFScore.Size = new System.Drawing.Size(52, 14);
+            this.lblFScore.TabIndex = 35;
+            this.lblFScore.Text = "F-Score:";
             // 
             // TextClusteringGUI
             // 
@@ -455,6 +467,7 @@
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboxDataSet;
+        private System.Windows.Forms.Label lblFScore;
     }
 }
 

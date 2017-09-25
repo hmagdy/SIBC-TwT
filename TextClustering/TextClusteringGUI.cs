@@ -24,7 +24,7 @@ namespace TextClustering
         private DocumentCollection docCollection;
         List<DocumentVector> vSpace;
         List<ClusterNode> mainCLusterNodeList;
-        int maxNoDoc = 100;
+        int maxNoDoc = 12;
 
         public TextClusteringGUI()
         {
@@ -145,6 +145,22 @@ namespace TextClustering
             int countDoc = 1;
             int count = 1;
             double ECS = 0;
+            //get size of class i in all classes
+            Dictionary<string, int> classesPairs = new Dictionary<string, int>();
+            List<double> FScores = new List<double>();
+            foreach (ClusterNode c in mainCLusterNodeList)
+            {
+                foreach (string item in c.cLusters)
+                {
+                    if(classesPairs.ContainsKey(item)){
+                        classesPairs[item]++;
+                    }else{
+                        classesPairs[item] = 1;
+                    }
+                }
+                
+            }
+
             foreach (Centroid c in resultSet)
             {
                 msg += String.Format("------------------------------[ CLUSTER {0} ]-----------------------------{1}", count, System.Environment.NewLine);
@@ -160,6 +176,18 @@ namespace TextClustering
                 var maxCount = nameGroup.Max(g => g.Count());
                 var mostCommons = nameGroup.Where(x => x.Count() == maxCount).Select(x => x.Key).ToArray();
                 msg += String.Format("------------------------------[ CLUSTER {0} ]-----------------------------{1}", mostCommons[0], System.Environment.NewLine);
+
+
+                double nj = totalNoOfItemsInCluster;
+                double ni = classesPairs[mostCommons[0]];
+                double nij = maxCount;
+                //Recall (i, j) = nij  / ni
+                double Recall = nij / ni;
+                //Precision(i, j) = nij / nj
+                double Precision = nij / nj;
+                //F (i, j) = 2 × (Recall(i, j) × Precision(i, j)) / (Recall (i, j) + Precision(i, j))
+                double fscore =  2 * (Recall * Precision) / (Recall + Precision);
+                FScores.Add(fscore);
 
                 foreach (DocumentVector document in c.GroupedDocument)
                 {
@@ -189,7 +217,10 @@ namespace TextClustering
                 count++;
             }
             richTextBox1.Text = msg + System.Environment.NewLine + "Entropy = " + ECS;
+            richTextBox1.Text = msg + System.Environment.NewLine + "FScore = " + FScores.Max();
             txtEntropy.Text = "Entropy: " + ECS;
+            lblFScore.Text = "FScore: " + FScores.Max();
+            
         }
 
         private void btnStartClustering_Click(object sender, EventArgs e)
@@ -197,7 +228,7 @@ namespace TextClustering
 
             int totalIteration = 0;
             DocumnetClustering.mainCentroids = DocumnetClustering.PrepareDocumentCluster(
-                int.Parse(txtClusterNo.Text), vSpace, ref  totalIteration, ddl_sim.Text, mainCLusterNodeList, cboxDataSet.Text);
+                int.Parse(txtClusterNo.Text), vSpace, ref  totalIteration, ddl_sim.Text, mainCLusterNodeList, cboxDataSet.Text, maxNoDoc);
             printAlll();
             lblTotalIteration.Text = totalIteration.ToString();
             //MessageBox.Show("Done");
@@ -476,7 +507,7 @@ namespace TextClustering
             {
 
                 docCollection.DocumentList = DeSerializeObject<List<string>>(path_data_docCollection);
-                mainCLusterNodeList = DeSerializeObject<List<ClusterNode>>(path_data_docCollection);
+                mainCLusterNodeList = DeSerializeObject<List<ClusterNode>>(path_data_mainCLusterNodeList);
             }
             else
             {
